@@ -11,7 +11,7 @@ namespace CSharpFileInOutConsoleApp
     {
         static void Main(string[] args)
         {
-            //Console.BackgroundColor = ConsoleColor.DarkGray;                                       Just in case you wanted to change it up in the future!
+            //Console.BackgroundColor = ConsoleColor.DarkGray;  !!!!!!!! Just in case you wanted to change it up in the future!
             Console.ForegroundColor = ConsoleColor.Cyan;
 
             Console.WriteLine("Welcome to your journal.\n\n\"There is nothing so useless as doing efficiently that which should not be done at all.\" - Peter Drucker");            
