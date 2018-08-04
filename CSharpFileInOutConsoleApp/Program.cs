@@ -10,6 +10,7 @@ namespace CSharpFileInOutConsoleApp
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
