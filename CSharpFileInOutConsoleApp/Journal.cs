@@ -17,16 +17,19 @@ namespace CSharpFileInOutConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Write a memory to be written with a time stamp!");
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.Cyan;
+
+            Console.WriteLine("Welcome to your journal.\n\n\"There is nothing so useless as doing efficiently that which should not be done at all.\" - Peter Drucker");            
 
             writeMore:
-            Console.Write("What would you like to store?: ");
+            Console.Write("\n\nWhat would you like to remember?: ");
             string TestLog = Console.ReadLine().ToLower(); ;
 
             using (StreamWriter file = new StreamWriter(@"C:\Users\New\Desktop\TestLog.txt", true))
             {
                 file.WriteLine(DateTime.Now);
-                file.WriteLine("\n\n" + TestLog);
+                file.WriteLine(TestLog + "\n");
             }
 
             string StoredValue = File.ReadAllText(@"C:\Users\New\Desktop\TestLog.txt");
@@ -40,7 +43,7 @@ namespace CSharpFileInOutConsoleApp
             //of the text files writing format. With only one integer it works perfectly, only when two values have been entered will it cause an error.
 
             Console.WriteLine("\n\nStored Values:\n{0}", StoredValue);
-            Console.Write("Would you like to write more values to the log? ");
+            Console.Write("Would you like to write more to the log? ");
             string UserResponse = Console.ReadLine();
 
             if  (UserResponse == "yes" || UserResponse == "yeah" || UserResponse == "y" || UserResponse == "ya")
@@ -48,7 +51,7 @@ namespace CSharpFileInOutConsoleApp
                 goto writeMore;
             }
 
-            Console.WriteLine("\nThanks for demoing my application!\n\nPress enter to exit!");
+            Console.WriteLine("\nIn hopes of reaching the moon, men fail to see the flower that blossom at their feet. \"Albert Schweitzer\"\n\nPress enter to exit!");
             Console.ReadLine();
 
             
