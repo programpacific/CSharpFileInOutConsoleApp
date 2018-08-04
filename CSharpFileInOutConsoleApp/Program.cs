@@ -23,7 +23,7 @@ namespace CSharpFileInOutConsoleApp
                 "I've selected a generic location, C:/Users/New/TestLog.txt, although this location may not exist\n" +
                 "on your machine & cause an error!\n\n");
 
-            writeMore:
+            writeMore: 
             Console.Write("What would you like to store?: ");
             string TestLog = Console.ReadLine().ToLower(); ;
 
