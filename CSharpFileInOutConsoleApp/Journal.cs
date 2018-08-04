@@ -17,7 +17,7 @@ namespace CSharpFileInOutConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.BackgroundColor = ConsoleColor.Black;
+            //Console.BackgroundColor = ConsoleColor.DarkGray;                                       Just in case you wanted to change it up in the future!
             Console.ForegroundColor = ConsoleColor.Cyan;
 
             Console.WriteLine("Welcome to your journal.\n\n\"There is nothing so useless as doing efficiently that which should not be done at all.\" - Peter Drucker");            
@@ -34,13 +34,6 @@ namespace CSharpFileInOutConsoleApp
 
             string StoredValue = File.ReadAllText(@"C:\Users\New\Desktop\TestLog.txt");
 
-            // You could at this point convert it into an "int", but not much reason to do it at this point of the application, unless it's built upon at a later point.
-            // The way it is designed now allows for a little bit more usability and was good practice!
-
-            //int IntValue = Int32.Parse(StoredInt); // You'd change then below code to write this value instead.
-
-            // But here it is anyways! Although if you were to handle more than one number as the program is currently designed you'd have to implement some special handling 
-            //of the text files writing format. With only one integer it works perfectly, only when two values have been entered will it cause an error.
 
             Console.WriteLine("\n\nStored Values:\n{0}", StoredValue);
             Console.Write("Would you like to write more to the log? ");
