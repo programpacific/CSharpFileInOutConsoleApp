@@ -24,7 +24,7 @@ namespace CSharpFileInOutConsoleApp
 
             writeMore:
             Console.Write("\n\nWhat would you like to remember?: ");
-            string TestLog = Console.ReadLine().ToLower(); ;
+            string TestLog = Console.ReadLine();
 
             using (StreamWriter file = new StreamWriter(@"C:\Users\New\Desktop\TestLog.txt", true))
             {
@@ -44,7 +44,7 @@ namespace CSharpFileInOutConsoleApp
                 goto writeMore;
             }
 
-            Console.WriteLine("\nIn hopes of reaching the moon, men fail to see the flower that blossom at their feet. \"Albert Schweitzer\"\n\nPress enter to exit!");
+            Console.WriteLine("\n\"In hopes of reaching the moon, men fail to see the flower that blossom at their feet.\" - Albert Schweitzer\n\nHAVE A GREAT DAY!");
             Console.ReadLine();
 
             
