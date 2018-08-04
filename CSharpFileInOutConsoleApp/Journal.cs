@@ -17,11 +17,7 @@ namespace CSharpFileInOutConsoleApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the File I/O Demonstration Application!\n\n" +
-                "Though you might not see it here, what I'll do is collect an input, write it to a file,\n" +
-                "and then write it back to the console by reading the just created file!\n\n" +
-                "I've selected a generic location, C:/Users/New/TestLog.txt, although this location may not exist\n" +
-                "on your machine & cause an error!\n\n");
+            Console.WriteLine("Write a memory to be written with a time stamp!");
 
             writeMore:
             Console.Write("What would you like to store?: ");
@@ -30,7 +26,7 @@ namespace CSharpFileInOutConsoleApp
             using (StreamWriter file = new StreamWriter(@"C:\Users\New\Desktop\TestLog.txt", true))
             {
                 file.WriteLine(DateTime.Now);
-                file.WriteLine(TestLog);
+                file.WriteLine("\n\n" + TestLog);
             }
 
             string StoredValue = File.ReadAllText(@"C:\Users\New\Desktop\TestLog.txt");
