@@ -6,12 +6,6 @@ using System.Threading.Tasks;
 using System.IO;
 
 namespace CSharpFileInOutConsoleApp
-
-   //    IN A CONSOLE APP, CREATE CODE THAT DOES THE FOLLOWING:
-  //1. Ask a user for a number.
- //2. Log that number to a text file.
-//3. Print the text file back to the user.
-
 {
     class Program
     {
